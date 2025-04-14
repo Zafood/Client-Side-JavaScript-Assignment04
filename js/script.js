@@ -1,7 +1,8 @@
 // Set student info
 const studentInfo = document.getElementById("student-info");
 if (studentInfo) {
-  studentInfo.textContent = "Student Name: Jane Doe | Student ID: 12345678";
+  studentInfo.textContent =
+    "Student Name: Marshall McDougall | Student ID: 1274438";
 }
 
 // Replace with your actual OpenWeatherMap API key
