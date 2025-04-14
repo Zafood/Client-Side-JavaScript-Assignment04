@@ -6,7 +6,7 @@ document.getElementById("student-info").textContent =
 const API_KEY = "YOUR_API_KEY_HERE";
 const CITY_ID = "6167865"; // Toronto
 
-const url = `http://api.openweathermap.org/data/2.5/forecast?id=${CITY_ID}&appid=${API_KEY}&units=metric`;
+const url = `https://api.openweathermap.org/data/2.5/forecast?id=${CITY_ID}&appid=${API_KEY}&units=metric`;
 
 async function fetchForecast() {
   try {
