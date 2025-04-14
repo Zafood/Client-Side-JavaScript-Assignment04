@@ -31,4 +31,4 @@ async function fetchWeather() {
   }
 }
 
-getWeather();
+fetchWeather();
