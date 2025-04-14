@@ -10,7 +10,7 @@ const EXCLUDE = "minutely,hourly,daily,alerts";
 
 // Get weather data using One Call API
 async function fetchWeather() {
-  const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${LAT}&lon=${LON}&exclude=${EXCLUDE}&appid=${API_KEY}&units=metric`;
+  const url = `b1b15e88fa797225412429c1c50c122a1">api.openweathermap.org/data/2.5/forecast?id&appid={API key}`;
   try {
     const res = await fetch(url);
     const data = await res.json();
