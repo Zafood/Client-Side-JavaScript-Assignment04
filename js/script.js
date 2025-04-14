@@ -2,14 +2,15 @@
 document.getElementById("student-info").textContent =
   "Student Name: Marshall McDougall | Student ID: 1274438";
 
-// Weather API configuration
-const API_KEY = "9ddcdbed46d83358c7591d3143296bb9"; // Replace with your actual key from weatherapi.com
-const CITY = "Toronto";
+/// Your API key
+const API_KEY = "9ddcdbed46d83358c7591d3143296bb9";
+const LAT = 43.65107; // Toronto Latitude
+const LON = -79.347015; // Toronto Longitude
+const EXCLUDE = "minutely,hourly,daily,alerts";
 
-// Fetch weather data
-async function getWeather() {
-  const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${CITY}&aqi=no`;
-
+// Get weather data using One Call API
+async function fetchWeather() {
+  const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${LAT}&lon=${LON}&exclude=${EXCLUDE}&appid=${API_KEY}&units=metric`;
   try {
     const res = await fetch(url);
     const data = await res.json();
@@ -30,5 +31,4 @@ async function getWeather() {
   }
 }
 
-// Call the function
 getWeather();
