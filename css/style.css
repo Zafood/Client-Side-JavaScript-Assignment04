@@ -1,15 +1,25 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 2rem;
-  background-color: #f0f4f8;
+  background-color: #e8f4fc;
   color: #333;
+  padding: 2rem;
+  text-align: center;
 }
 
-#weather-output {
+#forecast-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.forecast-card {
+  background: #ffffff;
   padding: 1rem;
-  margin-top: 1rem;
-  background-color: #e0f7fa;
-  border-left: 5px solid #00796b;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
 }
 
 footer {
