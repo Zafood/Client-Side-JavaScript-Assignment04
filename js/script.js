@@ -1,9 +1,9 @@
 // Add student info dynamically
 document.getElementById("student-info").textContent =
-  "Student Name: Jane Doe | Student ID: 12345678";
+  "Student Name: Marshall McDougall | Student ID: 1274438";
 
 // Weather API configuration
-const API_KEY = "YOUR_API_KEY"; // Replace with your actual key from weatherapi.com
+const API_KEY = "9ddcdbed46d83358c7591d3143296bb9"; // Replace with your actual key from weatherapi.com
 const CITY = "Toronto";
 
 // Fetch weather data
