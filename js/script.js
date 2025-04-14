@@ -1,31 +1,34 @@
-// Dynamically adding student ID and name
-const studentInfo = document.getElementById("student-info");
-studentInfo.textContent =
-  "Student Name: Marshall McDougall | Student ID: 1274438";
+// Add student info dynamically
+document.getElementById("student-info").textContent =
+  "Student Name: Jane Doe | Student ID: 12345678";
 
-// Function to get weather data using OpenWeatherMap API
-const API_KEY = "9ddcdbed46d83358c7591d3143296bb9"; // Replace with your actual API key
-const city = "Toronto"; // You can change this to any city
+// Weather API configuration
+const API_KEY = "YOUR_API_KEY"; // Replace with your actual key from weatherapi.com
+const CITY = "Toronto";
 
-// Call the API
-async function fetchWeather() {
+// Fetch weather data
+async function getWeather() {
+  const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${CITY}&aqi=no`;
+
   try {
-    const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
-    );
-    const data = await response.json();
+    const res = await fetch(url);
+    const data = await res.json();
 
-    const weatherDiv = document.getElementById("weather-output");
-    weatherDiv.innerHTML = `
-            <h2>Weather in ${data.name}</h2>
-            <p>Temperature: ${data.main.temp}°C</p>
-            <p>Condition: ${data.weather[0].description}</p>
-        `;
+    document.getElementById(
+      "location"
+    ).textContent = `📍 Location: ${data.location.name}, ${data.location.country}`;
+    document.getElementById(
+      "temperature"
+    ).textContent = `🌡️ Temperature: ${data.current.temp_c}°C`;
+    document.getElementById(
+      "condition"
+    ).textContent = `☁️ Condition: ${data.current.condition.text}`;
   } catch (error) {
-    console.error("Error fetching weather data:", error);
-    document.getElementById("weather-output").textContent =
+    console.error("Error fetching weather:", error);
+    document.getElementById("location").textContent =
       "Failed to load weather data.";
   }
 }
 
-fetchWeather();
+// Call the function
+getWeather();
