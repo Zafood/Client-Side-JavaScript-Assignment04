@@ -3,7 +3,7 @@ document.getElementById("student-info").textContent =
   "Student Name: Jane Doe | Student ID: 12345678";
 
 // Replace with your actual OpenWeatherMap API key
-const API_KEY = "YOUR_API_KEY_HERE";
+const API_KEY = "9ddcdbed46d83358c7591d3143296bb9";
 const CITY_ID = "6167865"; // Toronto
 
 const url = `https://api.openweathermap.org/data/2.5/forecast?id=${CITY_ID}&appid=${API_KEY}&units=metric`;
