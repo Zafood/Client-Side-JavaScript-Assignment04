@@ -1,9 +1,10 @@
 // Dynamically adding student ID and name
 const studentInfo = document.getElementById("student-info");
-studentInfo.textContent = "Student Name: Jane Doe | Student ID: 12345678";
+studentInfo.textContent =
+  "Student Name: Marshall McDougall | Student ID: 1274438";
 
 // Function to get weather data using OpenWeatherMap API
-const API_KEY = "YOUR_API_KEY"; // Replace with your actual API key
+const API_KEY = "9ddcdbed46d83358c7591d3143296bb9"; // Replace with your actual API key
 const city = "Toronto"; // You can change this to any city
 
 // Call the API
